@@ -88,11 +88,11 @@ ul {
     position: absolute;
 }
 
-.html5       { width:70%; background:#14bad4;  -moz-animation:html5 2s ease-out;       -webkit-animation:html5 2s ease-out;       }
-.css3        { width:90%; background:#fed201;  -moz-animation:css3 2s ease-out;        -webkit-animation:css3 2s ease-out;        }
-.jquery      { width:50%; background:#f5696c;  -moz-animation:jquery 2s ease-out;      -webkit-animation:jquery 2s ease-out;      }
-.photoshop   { width:40%; background:#5ac5bd;  -moz-animation:photoshop 2s ease-out;   -webkit-animation:photoshop 2s ease-out;   }
-.dreamweaver { width:60%; background:#c6de64; -moz-animation:dreamweaver 2s ease-out; -webkit-animation:dreamweaver 2s ease-out; }
+.lang       { width:70%; background:#14bad4;  -moz-animation:html5 2s ease-out;       -webkit-animation:html5 2s ease-out;       }
+.web        { width:90%; background:#fed201;  -moz-animation:css3 2s ease-out;        -webkit-animation:css3 2s ease-out;        }
+.cms      { width:50%; background:#f5696c;  -moz-animation:jquery 2s ease-out;      -webkit-animation:jquery 2s ease-out;      }
+.graf   { width:40%; background:#5ac5bd;  -moz-animation:photoshop 2s ease-out;   -webkit-animation:photoshop 2s ease-out;   }
+.movil { width:60%; background:#c6de64; -moz-animation:dreamweaver 2s ease-out; -webkit-animation:dreamweaver 2s ease-out; }
 
 @-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
 @-moz-keyframes css3        { 0%  { width:0px;} 100%{ width:90%;}  }
