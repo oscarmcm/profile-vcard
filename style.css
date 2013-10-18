@@ -1,0 +1,280 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+	background:#EDE9DF url(img/topbg.png) top repeat-x fixed;
+    font-family: "Open Sans",sans-serif;
+	font-size:13px;
+	}
+ul {
+	padding:0;
+	}
+.pro_cover {
+	width:390px;
+	min-height:400px;
+	background:#fff url(img/cover.png) top center no-repeat;
+	margin:100px auto 0;
+	text-align:center;
+	border-radius: 7px 7px 0 0;
+	}
+	.pro_cover .name {
+		font-size:30px;
+		color:#fff;
+		margin:10px 0;
+		}
+	.pro_cover .tw-name {
+		color:#eee;
+		font-size: 15px;
+		font-style: italic;
+		font-weight: 600;
+		margin: 0 0 10px;
+		}
+	.pro_dp {
+		border: 8px solid #fff;
+		border-radius:50%;
+		box-shadow: 0 0 7px #898989;
+    	margin: -20% 24% 5%;
+    	width: 150px;
+		}
+	ul.social_icons {
+		list-style:none;
+		}
+	ul.social_icons li{
+		display:inline-block;
+		margin:0 5px;
+		font-size:36px;
+		}
+	ul.social_icons li a {
+		text-decoration:none;
+		outline:none;
+		opacity:0.8;
+		color:#fff;
+		}
+	ul.social_icons li a:hover {
+		opacity:1;
+		}
+		
+
+#skill { 
+	list-style:none; 
+	padding-top:10px;
+	width:310px;
+	padding-left:0 !important;
+	position: relative;
+}
+
+#skill li { 
+	margin-bottom:15px; 
+	background:#eaedf2; 
+	height:30px; 
+	border-radius:3px; 
+}
+
+#skill li em { 
+	position:relative; 
+	top:-30px;
+}
+
+.expand { 
+	border-radius: 3px;
+    color: #323A45;
+    font-style: italic;
+    font-weight: bold;
+    height: 18px;
+    margin: 2px 0;
+    padding: 4px 0 4px 5px;
+    position: absolute;
+}
+
+.html5       { width:70%; background:#14bad4;  -moz-animation:html5 2s ease-out;       -webkit-animation:html5 2s ease-out;       }
+.css3        { width:90%; background:#fed201;  -moz-animation:css3 2s ease-out;        -webkit-animation:css3 2s ease-out;        }
+.jquery      { width:50%; background:#f5696c;  -moz-animation:jquery 2s ease-out;      -webkit-animation:jquery 2s ease-out;      }
+.photoshop   { width:40%; background:#5ac5bd;  -moz-animation:photoshop 2s ease-out;   -webkit-animation:photoshop 2s ease-out;   }
+.dreamweaver { width:60%; background:#c6de64; -moz-animation:dreamweaver 2s ease-out; -webkit-animation:dreamweaver 2s ease-out; }
+
+@-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
+@-moz-keyframes css3        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-moz-keyframes jquery      { 0%  { width:0px;} 100%{ width:50%;}  }
+@-moz-keyframes photoshop   { 0%  { width:0px;} 100%{ width:40%;}  }
+@-moz-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:60%;} }
+
+@-webkit-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
+@-webkit-keyframes css3        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-webkit-keyframes jquery      { 0%  { width:0px;} 100%{ width:50%;}  }
+@-webkit-keyframes photoshop   { 0%  { width:0px;} 100%{ width:40%;}  }
+@-webkit-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:60%;} }
+
+
+.tabs {
+    position: relative;
+	margin: 20px auto;
+	width: 390px;
+	border-radius: 0 0 7px 7px;
+}
+
+.tabs input[type=radio] {
+	position: absolute;
+	z-index: 1000;
+	width: 125px;
+	height: 60px;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+	cursor: pointer;
+}
+.tabs input#tab-2{
+	left: 133px;
+}
+.tabs input#tab-3{
+	left: 265px;
+}
+
+.tabs label {
+	background: #F47564;
+	font-size: 34px;
+	line-height: 60px;
+	height: 50px;
+	position: relative;
+	padding:14px 20px 0;
+    float: left;
+	display: block;
+	width: 90px;
+	color: #fff;
+	text-align: center;
+}
+
+.tabs label:after {
+    content: '';
+	background: #fff;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	display: block;
+}
+
+.tabs input:hover + label {
+	background: #59c4bc;
+}
+
+.tabs label:first-of-type {
+    z-index: 3;
+    box-shadow: 2px 0 2px rgba(0,0,0,0.1);
+}
+
+.tab-label-2 {
+    z-index: 2;
+}
+
+.tab-label-3 {
+    z-index: 1;
+}
+
+.tabs input:checked + label {
+    background: #fff;
+	color:#2c2c2c;
+	z-index: 6;
+}
+
+.clear-shadow {
+	clear: both;
+}
+
+.content {
+    background: #fff;
+    min-height: 370px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 5;
+}
+
+.content div {
+    position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 40px;
+	z-index: 1;
+    opacity: 0;
+	background:#fff;
+
+    -webkit-transition: opacity linear 0.1s;
+    -moz-transition: opacity linear 0.1s;
+    -o-transition: opacity linear 0.1s;
+    -ms-transition: opacity linear 0.1s;
+    transition: opacity linear 0.1s;
+}
+
+.tabs input.tab-selector-1:checked ~ .content .content-1,
+.tabs input.tab-selector-2:checked ~ .content .content-2,
+.tabs input.tab-selector-3:checked ~ .content .content-3,
+.tabs input.tab-selector-4:checked ~ .content .content-4 {
+	z-index: 100;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition: opacity ease-out 0.2s 0.1s;
+    -moz-transition: opacity ease-out 0.2s 0.1s;
+    -o-transition: opacity ease-out 0.2s 0.1s;
+    -ms-transition: opacity ease-out 0.2s 0.1s;
+    transition: opacity ease-out 0.2s 0.1s;
+}
+.content div h2,
+.content div h3{
+	color: #398080;
+}
+.content div p {
+	color: #777777;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+	text-align: left;
+}
+
+
+.form-wrapper-01 {
+    margin: 0;
+    padding: 10px 0;
+}
+.form-wrapper-01 .inputbox {
+    border: 1px solid #eaedf2;
+	background:#eaedf2;
+	border-radius:3px;
+    height: 20px;
+    padding: 10px 5px;
+    width: 100%;
+	outline:none;
+	margin-bottom:10px;
+    font-family: "Open Sans",sans-serif;
+}
+.form-wrapper-01 .message_box {
+    border: 1px solid #eaedf2;
+	background:#eaedf2;
+	border-radius:3px;
+    height: 100px;
+    padding: 10px 5px;
+    width: 100%;
+	outline:none;
+	margin-bottom:10px;
+}
+
+.form-wrapper-01 .button {
+	background: none repeat scroll 0 0 #14B9D5;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+.form-wrapper-01 .button:hover {
+	background:#0e778a;
+}
