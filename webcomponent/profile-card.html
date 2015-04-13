@@ -1,0 +1,124 @@
+<!--
+##### Example
+
+  <profile-vcard name="Oscar Cortez" image="name" short_desc="hello" long_desc="online"></profile-vcard>
+
+-->
+<polymer-element name="profile-vcard" attributes="name image short_desc long_desc stat">
+  <template>
+    <style type="text/css">
+      :host {
+        display: inline-block;
+      }
+      .center {
+          text-align: center;
+      }
+      .shadow {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+      .valing-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        -webkit-flex-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .valing {
+        display: block;
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        margin: 0.5rem 0 1rem 0;
+        background-color: #673AB7;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        height: auto;
+        width: 300px;
+      }
+      .card-header {
+        background-color: #512DA8;
+        color: #fff;
+        height: 25px;
+        padding-left: 15px;
+      }
+      .menu {
+        padding-left: 1.45em;
+        position: relative;
+      }
+      .menu:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.21em;
+        bottom: 0.21em;
+        width: 1em;
+        background: linear-gradient(
+          to bottom, 
+          white, white 20%, 
+          #512DA8 20%, #512DA8 40%, 
+          white 40%, white 60%, 
+          #512DA8 60%, #512DA8 80%, 
+          white 80%, white 100%
+        );
+      }
+      .circle {
+        border-radius: 50%;
+        background-color: #fff;
+        width: 8px;
+        height: 8px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        display: inline-block;
+        float: right;
+      }
+      .card-content {
+        padding-top: 20px;
+        color: #fff;
+      }
+      .user-image {
+        border-radius: 50%;
+        border: 5px solid #FFF;
+        height: 35%;
+        width: 35%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .user-name {
+        font-size: 24px;
+      }
+      .card-desc {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+    </style>
+
+    <article class="card shadow">
+      <div class="card-header valing-wrapper">
+        <a class="menu" href="#"></a>
+        <span class="valing">Profile</span>
+      </div>
+      <div class="card-content">
+        <img class="user-image center" src="{{ image }}">
+        <p class="user-name center">{{ name }}</p>
+        <div class="card-desc">
+          <p class="center">{{ short_desc }}</p>
+        </div>
+      </div>     
+    </article>
+
+  </template>
+  <script>
+  Polymer('profile-vcard', {
+    name: '',
+    image: '',
+    short_desc: '',
+    long_desc: '',
+    stat: '',
+  });
+  </script>
+</polymer-element>
