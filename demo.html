@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>&lt;profile-card&gt;: A web component to show a profile-card.</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css" media="screen,projection">
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="webcomponent/profile-card.html">
+    <title>Polymer Profile Card</title>
+  </head>
+  <body unresolved fullbleed>
+    <header>
+      
+    </header>
+
+    <template is="auto-binding">
+      <profile-vcard name="Oscar Cortez" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" short_desc="Viajero Del Tiempo - Open Source Lover - Open Hardware Enthusiastic - Open Data Addict - Developer at kronoscode - Carpe Diem" long_desc="online" stat="foo" style="margin-left:35px;"></profile-vcard>
+    </template>
+
+    <footer>
+      
+    </footer>
+  </body>
+  <script type="text/javascript">
+    var template = document.querySelector('template[is=auto-binding]');
+  </script>
+</html>
