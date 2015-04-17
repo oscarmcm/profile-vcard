@@ -4,7 +4,7 @@
   <profile-vcard name="Oscar Cortez" image="name" short_desc="hello" long_desc="online"></profile-vcard>
 
 -->
-<polymer-element name="profile-vcard" attributes="name image short_desc long_desc stat">
+<polymer-element name="profile-vcard" attributes="name image profession description twitter github place">
   <template>
     <style type="text/css">
       :host {
@@ -88,11 +88,30 @@
       }
       .user-name {
         font-size: 24px;
+        margin: 0px;
+      }
+      .user-profession {
+        font-size: 11px;
+        margin: 0px;
       }
       .card-desc {
         font-size: 12px;
         padding-left: 10px;
         padding-right: 10px;
+      }
+      .card-social {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+      }
+      .twitter {
+        width: 50%;
+        border-right: 1px solid white;
+      }
+      .facebook {
+        width: 50%;
+      }
+      .card-place {
+        color: #FFF;
       }
 
     </style>
@@ -105,10 +124,22 @@
       <div class="card-content">
         <img class="user-image center" src="{{ image }}">
         <p class="user-name center">{{ name }}</p>
+        <p class="user-profession center">{{ profession }}</p>
         <div class="card-desc">
-          <p class="center">{{ short_desc }}</p>
+          <p class="center">{{ description }}</p>
         </div>
-      </div>     
+      </div>
+      <div class="card-social">
+        <div class="twitter">
+          <a href="http://www.twitter.com/{{ twitter }}"></a>
+        </div>
+        <div class="facebook">
+          <a href="http://www.facebook.com/{{ github }}"></a>
+        </div>
+      </div>
+      <div class="card-place">
+        <p class="center">{{ place }}</p>
+      </div>
     </article>
 
   </template>
@@ -116,9 +147,11 @@
   Polymer('profile-vcard', {
     name: '',
     image: '',
-    short_desc: '',
-    long_desc: '',
-    stat: '',
+    profession: '',
+    description: '',
+    twitter: '',
+    github: '',
+    place: '',
   });
   </script>
 </polymer-element>
