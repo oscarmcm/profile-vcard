@@ -4,7 +4,7 @@
   <profile-vcard name="Oscar Cortez" image="name" short_desc="hello" long_desc="online"></profile-vcard>
 
 -->
-<polymer-element name="profile-vcard" attributes="name image profession description twitter github place">
+<polymer-element name="profile-vcard" attributes="name image profession description twitter website place">
   <template>
     <style type="text/css">
       :host {
@@ -100,16 +100,42 @@
         padding-right: 10px;
       }
       .card-social {
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .card-social-container {
-        width: 50%;
+      .twitter {
+        flex: 5;
+        text-align: center;
       }
-      
+      .vseparator {
+        height: 15px;
+        width: 1px;
+        margin: 0 auto;
+        background-color: #FFF;
+      }
+      .website {
+        flex: 5;
+        color: #D1C4E9;
+        text-align: center;
+      }
+      .twitter > a, .website > a {
+        text-decoration: none;
+        color: #D1C4E9
+      }
       .card-place {
         color: #FFF;
+        margin: 0 auto;
+        width: 50%;
+        border: 1px solid #D1C4E9;
+        margin-bottom: 10px;
       }
 
     </style>
@@ -122,15 +148,18 @@
       <div class="card-content">
         <img class="user-image center" src="{{ image }}">
         <p class="user-name center">{{ name }}</p>
+        <div class="card-social">
+          <div class="twitter">
+            <a href="http://www.twitter.com/{{ twitter }}" class="center">@{{ twitter }}</a>
+          </div>
+          <div class="vseparator"></div>
+          <div class="website">
+            <a href="http://www.{{ website }}" class="center">{{ website }}</a>
+          </div>
+        </div>
         <p class="user-profession center">{{ profession }}</p>
         <div class="card-desc">
           <p class="center">{{ description }}</p>
-        </div>
-      </div>
-      <div class="card-social">
-        <div class="card-social-container">
-        </div>
-        <div class="card-social-container">
         </div>
       </div>
       <div class="card-place">
@@ -146,7 +175,7 @@
     profession: '',
     description: '',
     twitter: '',
-    github: '',
+    website: '',
     place: '',
   });
   </script>
