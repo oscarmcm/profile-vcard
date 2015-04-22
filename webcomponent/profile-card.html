@@ -1,7 +1,34 @@
 <!--
-##### Example
+LICENSE: github.com/oscarmcm/profile-vcard/blob/master/LICENSE
+AUTHOR: Oscar Cortez.
+-->
 
-  <profile-vcard name="Oscar Cortez" image="name" short_desc="hello" long_desc="online"></profile-vcard>
+<!--
+&lt;profile-vcard&gt; is my a simple polymer template that will be used for display
+user information in a simple and cool way.
+
+<img style="max-width:100%;" src="../profile-vcard-demo.png"/>
+
+
+#### Example
+
+    <profile-vcard name="Oscar Cortez" image="https://pbs.twimg.com/profile_images/482222151932456960/6-cd1FU0.jpeg" profession="Full Stack Ninja Developer" description="Write here your cool description"  twitter="oscar_mcm" website="oscarmcm.com" place="Managua, Nicaragua"></profile-vcard>
+
+#### Notes
+
+The twitter username is passed without the '@' element.
+
+The website url will be passed without 'www' element only foo.baz.
+
+#### Testing
+By default, the demo accompanying this element is setup to work on localhost with
+port 8080. so please test and if you have any problem or another thing open a issue 
+in github repository.
+
+@class profile-vcard
+@blurb A Polymer element for display a cool profile-vcard.
+@status beta
+@homepage https://oscarmcm.github.io/profile-vcard
 
 -->
 <polymer-element name="profile-vcard" attributes="name image profession description twitter website place">
@@ -15,17 +42,6 @@
       }
       .shadow {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      }
-      .valing-wrapper {
-        display: -webkit-box;
-        display: -moz-box;
-        -webkit-flex-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-      .valing {
-        display: block;
       }
       .card {
         position: relative;
@@ -42,36 +58,6 @@
         color: #fff;
         height: 25px;
         padding-left: 15px;
-      }
-      .menu {
-        padding-left: 1.45em;
-        position: relative;
-      }
-      .menu:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.21em;
-        bottom: 0.21em;
-        width: 1em;
-        background: linear-gradient(
-          to bottom, 
-          white, white 20%, 
-          #512DA8 20%, #512DA8 40%, 
-          white 40%, white 60%, 
-          #512DA8 60%, #512DA8 80%, 
-          white 80%, white 100%
-        );
-      }
-      .circle {
-        border-radius: 50%;
-        background-color: #fff;
-        width: 8px;
-        height: 8px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        display: inline-block;
-        float: right;
       }
       .card-content {
         padding-top: 20px;
@@ -92,7 +78,7 @@
       }
       .user-profession {
         font-size: 11px;
-        margin: 0px;
+        margin: 10px auto;
       }
       .card-desc {
         font-size: 12px;
@@ -136,14 +122,13 @@
         width: 50%;
         border: 1px solid #D1C4E9;
         margin-bottom: 10px;
+        background-color: #512DA8;
       }
 
     </style>
 
     <article class="card shadow">
-      <div class="card-header valing-wrapper">
-        <a class="menu" href="#"></a>
-        <span class="valing">Profile</span>
+      <div class="card-header">
       </div>
       <div class="card-content">
         <img class="user-image center" src="{{ image }}">
@@ -170,12 +155,54 @@
   </template>
   <script>
   Polymer('profile-vcard', {
+   /**
+   * The user name for the card.
+   *
+   * @attribute name
+   * @type string
+   */
     name: '',
+   /**
+   * The user profile image for the card.
+   *
+   * @attribute image
+   * @type string
+   */
     image: '',
+   /**
+   * The user profession for the card.
+   *
+   * @attribute profession
+   * @type string
+   */
     profession: '',
+   /**
+   * The user description for the card.
+   *
+   * @attribute description
+   * @type string
+   */
     description: '',
+   /**
+   * The username for twitter, this will be passed without '!@'.
+   *
+   * @attribute twitter
+   * @type string
+   */
     twitter: '',
+   /**
+   * The user website link for the card, please use this without 'www'.
+   *
+   * @attribute name
+   * @type string
+   */
     website: '',
+   /**
+   * The user location for the card.
+   *
+   * @attribute place
+   * @type string
+   */
     place: '',
   });
   </script>
