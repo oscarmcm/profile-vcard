@@ -6,6 +6,13 @@
 You can see the demo [here](http://oscarmcm.github.io/profile-vcard)
 
 ## How-to
+Install via bower
+```
+bower install profile-vcard
+```
+
+And add this in your polymer project
+
 ```html
 <link rel="import" href="webcomponent/profile-vcard.html">
 
