@@ -1,3 +1,16 @@
+2.0.0 / 2015-08-20
+==================
+
+  * update the changelog.md
+  * move this to polymer 1.0
+  * some fix with the demo page
+  * update this to polymer 1.0
+  * update this to polymer 1.0
+  * we use seed template
+  * new demo page
+  * old demo style
+  * update dependencies
+  * update this to V2.0
 
 1.0.0 / 2015-04-22
 ==================
