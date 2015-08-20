@@ -1,6 +1,6 @@
 {
   "name": "profile-vcard",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/oscarmcm/profile-vcard",
   "authors": [
     "Oscar Cortez <om.cortez.2010@gmail.com>"
@@ -17,19 +17,23 @@
     "profile",
     "card",
     "web-components",
+    "web-component",
+    "seed",
     "vcard"
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
+    "/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "/test/",
+    "/demo/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.5.2",
-    "materialize": "latest",
-    "webcomponentsjs": "~0.5.5"
+     "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+     "web-component-tester": "*"
   }
 }
