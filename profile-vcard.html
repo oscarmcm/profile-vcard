@@ -34,105 +34,103 @@ in the github repository.
 
 <dom-module id="profile-vcard" >
 
-<style type="text/css">
-  :host {
-    display: inline-block;
-  }
-  .center {
-    text-align: center;
-  }
-  .shadow {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  }
-  .card {
-    position: relative;
-    overflow: hidden;
-    margin: 0.5rem 0 1rem 0;
-    background-color: #673AB7;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    height: auto;
-    width: 300px;
-  }
-  .card-header {
-    background-color: #512DA8;
-    color: #fff;
-    height: 25px;
-    padding-left: 15px;
-  }
-  .card-content {
-    padding-top: 20px;
-    color: #fff;
-  }
-  .user-image {
-    border-radius: 50%;
-    border: 5px solid #FFF;
-    height: 35%;
-    width: 35%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .user-name {
-    font-size: 24px;
-    margin: 0px;
-  }
-  .user-profession {
-    font-size: 11px;
-    margin: 10px auto;
-  }
-  .card-desc {
-    font-size: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .card-social {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .twitter {
-    flex: 5;
-    color: #D1C4E9;
-    text-align: center;
-  }
-  .vseparator {
-    height: 15px;
-    width: 1px;
-    margin: 0 auto;
-    background-color: #FFF;
-  }
-  .website {
-    flex: 5;
-    color: #D1C4E9;
-    text-align: center;
-  }
-  .twitter > a, .website > a {
-    text-decoration: none;
-    color: #D1C4E9
-  }
-  .card-place {
-    color: #FFF;
-    margin: 0 auto;
-    width: 50%;
-    border: 1px solid #D1C4E9;
-    margin-bottom: 10px;
-    background-color: #512DA8;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-</style>
-
 <template>
-
+    <style type="text/css">
+      :host {
+        display: inline-block;
+      }
+      .center {
+        text-align: center;
+      }
+      .shadow {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        margin: 0.5rem 0 1rem 0;
+        background-color: #673AB7;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        height: auto;
+        width: 300px;
+      }
+      .card-header {
+        background-color: #512DA8;
+        color: #fff;
+        height: 25px;
+        padding-left: 15px;
+      }
+      .card-content {
+        padding-top: 20px;
+        color: #fff;
+      }
+      .user-image {
+        border-radius: 50%;
+        border: 5px solid #FFF;
+        height: 35%;
+        width: 35%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .user-name {
+        font-size: 24px;
+        margin: 0px;
+      }
+      .user-profession {
+        font-size: 11px;
+        margin: 10px auto;
+      }
+      .card-desc {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .card-social {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .twitter {
+        flex: 5;
+        color: #D1C4E9;
+        text-align: center;
+      }
+      .vseparator {
+        height: 15px;
+        width: 1px;
+        margin: 0 auto;
+        background-color: #FFF;
+      }
+      .website {
+        flex: 5;
+        color: #D1C4E9;
+        text-align: center;
+      }
+      .twitter > a, .website > a {
+        text-decoration: none;
+        color: #D1C4E9
+      }
+      .card-place {
+        color: #FFF;
+        margin: 0 auto;
+        width: 50%;
+        border: 1px solid #D1C4E9;
+        margin-bottom: 10px;
+        background-color: #512DA8;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    
+    </style>
   <article class="card shadow">
     <div class="card-header">
     </div>
@@ -160,63 +158,78 @@ in the github repository.
 
 </template>
 
-</dom-module>
 <script>
 
-  Polymer({
-    
-    is: 'profile-vcard',
-
-    properties: {
-      /**
-      * The user name for the card.
-      *
-      * @attribute name
-      * @type string
-      */
-      name: '',
-      /**
-      * The user profile image for the card.
-      *
-      * @attribute image
-      * @type string
-      */
-      image: '',
-      /**
-      * The user profession for the card.
-      *
-      * @attribute profession
-      * @type string
-      */
-      profession: '',
-      /**
-      * The user description for the card.
-      *
-      * @attribute description
-      * @type string
-      */
-      description: '',
-      /**
-      * The username for twitter, this will be passed without '@'.
-      *
-      * @attribute twitter
-      * @type string
-      */
-      twitter: '',
-      /**
-      * The user website link for the card, please use this without 'www'.
-      *
-      * @attribute name
-      * @type string
-      */
-      website: '',
-      /**
-      * The user location for the card.
-      *
-      * @attribute place
-      * @type string
-      */
-      place: '',
-    },
-  });
-</script>
+  class profileVCard extends Polymer.Element {
+      static get is() { return 'profile-vcard'; }
+      static get properties() {
+        return {
+          /**
+          * The user name for the card.
+          *
+          * @attribute name
+          * @type string
+          */
+          name: {
+            type: String,            
+          },
+          /**
+          * The user profile image for the card.
+          *
+          * @attribute image
+          * @type string
+          */
+          image: {
+            type: String,            
+          },
+          /**
+          * The user profession for the card.
+          *
+          * @attribute profession
+          * @type string
+          */
+          profession: {
+            type: String,            
+          },
+          /**
+          * The user description for the card.
+          *
+          * @attribute description
+          * @type string
+          */
+          description: {
+            type: String,            
+          },
+          /**
+          * The username for twitter, this will be passed without '@'.
+          *
+          * @attribute twitter
+          * @type string
+          */
+          twitter: {
+            type: String,            
+          },
+          /**
+          * The user website link for the card, please use this without 'www'.
+          *
+          * @attribute name
+          * @type string
+          */
+          website: {
+            type: String,            
+          },
+          /**
+          * The user location for the card.
+          *
+          * @attribute place
+          * @type string
+          */
+          place: {
+            type: String,            
+          }
+        };
+      }
+    }
+    window.customElements.define(profileVCard.is, profileVCard);
+  </script>
+</dom-module>
